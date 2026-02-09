@@ -626,7 +626,7 @@ class KategoriPage {
     }
 
     showCheckoutModal() {
-        alert('Fitur checkout lengkap tersedia di halaman utama');
+        alert('Checkout produk di halaman beranda!');
         window.location.href = '../index.html';
     }
 
