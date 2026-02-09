@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perlengkapan Dapur</title>
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/utama.css">
+    <link rel="stylesheet" href="../../css/detail-kategori.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../../index.html">
+                    <div class="logo-container">
+                        <span class="logo-text">SENTRAL PLASTIK</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html">
+                                <i class="fas fa-home"></i> BERANDA
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../kategori.html">
+                                <i class="fas fa-th-large"></i> KATEGORI
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../blog.html">
+                                <i class="fas fa-blog"></i> BLOG
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../penawaran.html">
+                                <i class="fas fa-tag"></i> PENAWARAN SPESIAL
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="header-icons">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Cari produk..." id="searchInput">
+                        </div>
+                        <div class="cart-icon">
+                            <a href="#" id="cartButton">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="cart-count" id="cartCount">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content detail-kategori-main">
+        <section class="banner-detail-kategori">
+            <div class="container">
+                <div class="banner-content">
+                    <div class="banner-text">
+                        <h1 class="banner-title">PERLENGKAPAN DAPUR</h1>
+                        <p class="banner-subtitle">Alat makan dan perlengkapan dapur plastik berkualitas untuk kebutuhan rumah tangga Anda</p>
+                    </div>
+                    <div class="banner-image">
+                        <div class="banner-placeholder">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="breadcrumb-section">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../../index.html">Beranda</a></li>
+                        <li class="breadcrumb-item"><a href="../kategori.html">Kategori</a></li>
+                        <li class="breadcrumb-item active">Perlengkapan Dapur</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <section class="info-kategori-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h2>Tentang Perlengkapan Dapur</h2>
+                        <p>Kami menyediakan berbagai perlengkapan dapur plastik berkualitas tinggi yang aman untuk makanan, tahan lama, dan praktis digunakan. Produk kami dirancang untuk memudahkan aktivitas memasak dan menyajikan makanan di rumah Anda.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="kategori-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">15</span>
+                                <span class="stat-label">Produk Tersedia</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Pelanggan Puas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">PRODUK PERLENGKAPAN DAPUR</h2>
+                    <div class="sort-by">
+                        <select class="form-select" id="sortSelect">
+                            <option value="default">Urutkan</option>
+                            <option value="name">Nama A-Z</option>
+                            <option value="price-low">Harga Terendah</option>
+                            <option value="price-high">Harga Tertinggi</option>
+                            <option value="popular">Terpopuler</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row" id="productsGrid">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <span class="product-badge">DISKON</span>
+                                Gelas Plastik 14oz
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">PERLENGKAPAN DAPUR</div>
+                                <div class="product-name">Gelas Plastik 14oz 50pcs</div>
+                                <div class="product-price">
+                                    Rp 48.000
+                                    <span class="old-price">Rp 55.000</span>
+                                </div>
+                                <button class="btn-product" onclick="detailKategori.addToCart(1)">
+                                    <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <span class="product-badge">TERLARIS</span>
+                                Sendok Plastik Premium
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">PERLENGKAPAN DAPUR</div>
+                                <div class="product-name">Sendok Plastik Premium 100pcs</div>
+                                <div class="product-price">
+                                    Rp 35.000
+                                    <span class="old-price">Rp 40.000</span>
+                                </div>
+                                <button class="btn-product" onclick="detailKategori.addToCart(2)">
+                                    <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <span class="product-badge">BARU</span>
+                                Pisau Plastik
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">PERLENGKAPAN DAPUR</div>
+                                <div class="product-name">Pisau Plastik 24pcs</div>
+                                <div class="product-price">
+                                    Rp 28.000
+                                    <span class="old-price">Rp 32.000</span>
+                                </div>
+                                <button class="btn-product" onclick="detailKategori.addToCart(3)">
+                                    <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <span class="product-badge">DISKON</span>
+                                Garpu Plastik
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">PERLENGKAPAN DAPUR</div>
+                                <div class="product-name">Garpu Plastik 50pcs</div>
+                                <div class="product-price">
+                                    Rp 25.000
+                                    <span class="old-price">Rp 30.000</span>
+                                </div>
+                                <button class="btn-product" onclick="detailKategori.addToCart(4)">
+                                    <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <span class="product-badge">TERLARIS</span>
+                                Mangkuk Plastik
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">PERLENGKAPAN DAPUR</div>
+                                <div class="product-name">Mangkuk Plastik 6pcs</div>
+                                <div class="product-price">
+                                    Rp 45.000
+                                    <span class="old-price">Rp 50.000</span>
+                                </div>
+                                <button class="btn-product" onclick="detailKategori.addToCart(5)">
+                                    <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <span class="product-badge">BARU</span>
+                                Tatakan Gelas
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">PERLENGKAPAN DAPUR</div>
+                                <div class="product-name">Tatakan Gelas Plastik 10pcs</div>
+                                <div class="product-price">
+                                    Rp 18.000
+                                    <span class="old-price">Rp 22.000</span>
+                                </div>
+                                <button class="btn-product" onclick="detailKategori.addToCart(6)">
+                                    <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <span class="product-badge">DISKON</span>
+                                Sendok Nasi
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">PERLENGKAPAN DAPUR</div>
+                                <div class="product-name">Sendok Nasi Plastik 20pcs</div>
+                                <div class="product-price">
+                                    Rp 32.000
+                                    <span class="old-price">Rp 38.000</span>
+                                </div>
+                                <button class="btn-product" onclick="detailKategori.addToCart(7)">
+                                    <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <span class="product-badge">TERLARIS</span>
+                                Piring Plastik
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">PERLENGKAPAN DAPUR</div>
+                                <div class="product-name">Piring Plastik 8pcs</div>
+                                <div class="product-price">
+                                    Rp 40.000
+                                    <span class="old-price">Rp 45.000</span>
+                                </div>
+                                <button class="btn-product" onclick="detailKategori.addToCart(8)">
+                                    <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <button class="btn-load-more" id="loadMore">Muat Lebih Banyak</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section bg-light">
+            <div class="container">
+                <h2 class="section-title">PRODUK UNGGULAN</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="featured-item">
+                            <div class="featured-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h4>Kualitas Terbaik</h4>
+                            <p>Produk kami terbuat dari bahan plastik food grade yang aman untuk makanan</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="featured-item">
+                            <div class="featured-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <h4>Pengiriman Cepat</h4>
+                            <p>Pesanan dikirim dalam 1-2 hari kerja untuk wilayah Jakarta dan sekitarnya</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="featured-item">
+                            <div class="featured-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h4>Dukungan Pelanggan</h4>
+                            <p>Tim kami siap membantu Anda 7 hari seminggu melalui WhatsApp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-categories">
+            <div class="container">
+                <h2 class="section-title">KATEGORI TERKAIT</h2>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <a href="alatmakan.html" class="related-category">
+                            <div class="related-icon">
+                                <i class="fas fa-utensil-spoon"></i>
+                            </div>
+                            <span>Alat Makan Plastik</span>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="wadah.html" class="related-category">
+                            <div class="related-icon">
+                                <i class="fas fa-box-open"></i>
+                            </div>
+                            <span>Wadah Plastik</span>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="kemasan.html" class="related-category">
+                            <div class="related-icon">
+                                <i class="fas fa-box"></i>
+                            </div>
+                            <span>Kemasan Makanan</span>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="aluminium.html" class="related-category">
+                            <div class="related-icon">
+                                <i class="fas fa-temperature-high"></i>
+                            </div>
+                            <span>Aluminium Foil</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand">SENTRAL PLASTIK</div>
+                    <p class="footer-description">
+                        Distributor perlengkapan plastik terlengkap dengan kualitas terbaik dan harga kompetitif.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h4>KATEGORI</h4>
+                    <ul class="footer-links">
+                        <li><a href="dapur.html">Perlengkapan Dapur</a></li>
+                        <li><a href="kemasan.html">Kemasan Makanan</a></li>
+                        <li><a href="rumahtangga.html">Perlengkapan Rumah Tangga</a></li>
+                        <li><a href="usaha.html">Kebutuhan Usaha</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h4>LINK CEPAT</h4>
+                    <ul class="footer-links">
+                        <li><a href="../../index.html">Beranda</a></li>
+                        <li><a href="../kategori.html">Kategori</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../penawaran.html">Penawaran Spesial</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4>KONTAK KAMI</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Jl. Raya Plastik No. 123, Jakarta</li>
+                        <li><i class="fas fa-phone"></i> 0812-3456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@sentralplastik.com</li>
+                        <li><i class="fas fa-clock"></i> Senin - Sabtu: 08.00 - 17.00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2026 SENTRAL PLASTIK. Seluruh hak cipta dilindungi oleh undang-undang.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">KERANJANG BELANJA</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cartItems"></div>
+                    <div class="cart-total">
+                        <h4>Total: <span id="cartTotal">Rp 0</span></h4>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Lanjut Belanja</button>
+                    <button type="button" class="btn btn-primary" id="checkoutButton">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/detail-kategori.js"></script>
+</body>
+</html>
