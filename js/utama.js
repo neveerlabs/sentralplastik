@@ -241,11 +241,11 @@ class SentralPlastikApp {
 
     startNotificationCycle() {
         const defaultNotifications = [
-            { buyer: "Selecciona baju saja", item: "Cup Plastik 16oz", time: "2 Menit yang lalu" },
-            { buyer: "Budi Santoso", item: "Sendok Plastik 50pcs", time: "15 Menit yang lalu" },
-            { buyer: "Sari Makanan", item: "Wadah Makanan 500ml (10pcs)", time: "30 Menit yang lalu" },
-            { buyer: "Toko Plastik Jaya", item: "Box Makanan Segi Empat 500ml", time: "1 Jam yang lalu" },
-            { buyer: "Warung Sederhana", item: "Cup Plastik 8oz Box 100pcs", time: "2 Jam yang lalu" }
+            { buyer: "Bambang Mulyono", item: "Cup Plastik 16oz", time: "2 Menit yang lalu" },
+            { buyer: "Geng Yakuza", item: "Sendok Plastik 50pcs", time: "15 Menit yang lalu" },
+            { buyer: "Yesus", item: "Wadah Makanan 500ml (10pcs)", time: "30 Menit yang lalu" },
+            { buyer: "Prabowo", item: "Box Makanan Segi Empat 500ml buat MBG", time: "1 Jam yang lalu" },
+            { buyer: "Fir' aun", item: "Cup Plastik 8oz Box 100pcs", time: "2 Jam yang lalu" }
         ];
         
         this.notificationQueue = [...defaultNotifications];
