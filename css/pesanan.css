@@ -1,0 +1,592 @@
+.kategori-main {
+    padding-top: 0;
+    background-color: var(--white);
+}
+
+.banner-kategori {
+    padding: 40px 0;
+    background: white;
+    margin-bottom: 40px;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-kategori::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+    background-size: cover;
+}
+
+.banner-kategori .container {
+    position: relative;
+    z-index: 1;
+}
+
+.banner-kategori .banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    min-height: 280px;
+}
+
+.banner-kategori .banner-text {
+    flex: 1;
+    color: var(--white);
+    padding-right: 40px;
+    max-width: 600px;
+}
+
+.banner-kategori .banner-title {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.banner-kategori .banner-subtitle {
+    font-size: 18px;
+    margin-bottom: 25px;
+    opacity: 0.95;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.banner-stats {
+    display: flex;
+    gap: 30px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    background: rgba(255,255,255,0.15);
+    padding: 8px 15px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-2px);
+}
+
+.stat-item i {
+    font-size: 16px;
+    color: var(--white);
+}
+
+.stat-item span {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--white);
+}
+
+.banner-kategori .banner-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 400px;
+}
+
+.banner-kategori .banner-placeholder {
+    width: 220px;
+    height: 220px;
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 80px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border: 8px solid rgba(255,255,255,0.2);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+/* Quick Filter Section */
+.quick-filter-section {
+    padding: 30px 0;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 60px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.quick-filter-section .section-header {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filter-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.filter-tag {
+    padding: 10px 22px;
+    background-color: var(--light-gray);
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--black);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.filter-tag:hover {
+    background-color: var(--light-blue);
+    border-color: var(--blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,102,204,0.15);
+}
+
+.filter-tag.active {
+    background-color: var(--blue);
+    color: var(--white);
+    border-color: var(--blue);
+    box-shadow: 0 4px 15px rgba(0,102,204,0.25);
+}
+
+.filter-tag.active i {
+    color: var(--white);
+}
+
+.btn-filter {
+    background-color: transparent;
+    color: var(--blue);
+    border: 2px solid var(--blue);
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-filter:hover {
+    background-color: var(--blue);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,102,204,0.25);
+}
+
+.btn-filter i {
+    font-size: 12px;
+}
+
+/* Kategori Section */
+.kategori-section {
+    padding: 50px 0;
+    background-color: var(--white);
+}
+
+.section-subtitle {
+    color: var(--gray);
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.order-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    margin-bottom: 25px;
+    height: 100%;
+    transition: all 0.4s ease;
+    position: relative;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.order-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--blue);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.order-card .card-header {
+    background-color: var(--light-blue);
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 20px;
+}
+
+.order-card .card-body {
+    padding: 20px;
+}
+
+.order-status {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-pending {
+    background-color: var(--yellow);
+    color: #856404;
+}
+
+.status-processing {
+    background-color: var(--blue);
+    color: white;
+}
+
+.status-shipped {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.status-delivered {
+    background-color: var(--green);
+    color: white;
+}
+
+.status-cancelled {
+    background-color: var(--red);
+    color: white;
+}
+
+.order-items {
+    margin-top: 15px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.order-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn-view-detail {
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-view-detail:hover {
+    background-color: #0056b3;
+}
+
+.btn-cancel-order {
+    background-color: var(--red);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cancel-order:hover {
+    background-color: #c82333;
+}
+
+/* Modal Styles for Order Detail */
+.modal-order-detail {
+    max-width: 800px;
+}
+
+.order-detail-content {
+    padding: 20px;
+}
+
+.order-detail-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.order-detail-items {
+    margin-top: 20px;
+}
+
+.order-detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.order-detail-item:last-child {
+    border-bottom: none;
+}
+
+.order-detail-total {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid var(--border-color);
+    text-align: right;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 12px;
+    border: 2px dashed var(--border-color);
+    margin: 20px 0;
+}
+
+.empty-state i {
+    font-size: 64px;
+    color: var(--light-gray);
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+.empty-state h4 {
+    color: var(--gray);
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.empty-state p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1199px) {
+    .banner-kategori .banner-title {
+        font-size: 32px;
+    }
+    
+    .banner-kategori .banner-placeholder {
+        width: 200px;
+        height: 200px;
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 991px) {
+    .banner-kategori .banner-content {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+        padding: 30px 20px;
+    }
+    
+    .banner-kategori .banner-text {
+        padding-right: 0;
+        margin-bottom: 30px;
+        max-width: 100%;
+    }
+    
+    .banner-kategori .banner-title {
+        font-size: 28px;
+    }
+    
+    .banner-kategori .banner-subtitle {
+        font-size: 16px;
+    }
+    
+    .banner-stats {
+        justify-content: center;
+    }
+    
+    .banner-kategori .banner-image {
+        justify-content: center;
+        max-width: 100%;
+    }
+    
+    .banner-kategori .banner-placeholder {
+        width: 180px;
+        height: 180px;
+        font-size: 60px;
+    }
+    
+    .quick-filter-section {
+        top: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+    .banner-kategori {
+        padding: 30px 0;
+        margin-bottom: 30px;
+        border-radius: 0 0 15px 15px;
+    }
+    
+    .banner-kategori .banner-title {
+        font-size: 24px;
+    }
+    
+    .banner-kategori .banner-subtitle {
+        font-size: 15px;
+    }
+    
+    .banner-stats {
+        gap: 15px;
+        justify-content: center;
+    }
+    
+    .stat-item {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    
+    .stat-item span {
+        font-size: 15px;
+    }
+    
+    .banner-kategori .banner-placeholder {
+        width: 150px;
+        height: 150px;
+        font-size: 50px;
+        border-width: 6px;
+    }
+    
+    .quick-filter-section {
+        padding: 25px 0;
+    }
+    
+    .filter-tags {
+        gap: 8px;
+        justify-content: flex-start;
+    }
+    
+    .filter-tag {
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+    
+    .btn-filter {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+    
+    .order-card {
+        margin-bottom: 20px;
+    }
+    
+    .order-actions {
+        flex-direction: column;
+    }
+    
+    .btn-view-detail, .btn-cancel-order {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .banner-kategori .banner-content {
+        padding: 25px 15px;
+    }
+    
+    .banner-kategori .banner-title {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+    
+    .banner-kategori .banner-subtitle {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .banner-stats {
+        gap: 10px;
+    }
+    
+    .stat-item {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    
+    .stat-item span {
+        font-size: 14px;
+    }
+    
+    .banner-kategori .banner-placeholder {
+        width: 130px;
+        height: 130px;
+        font-size: 45px;
+    }
+    
+    .filter-tags {
+        gap: 6px;
+    }
+    
+    .filter-tag {
+        padding: 7px 15px;
+        font-size: 12px;
+    }
+    
+    .btn-filter {
+        padding: 7px 18px;
+        font-size: 12px;
+    }
+}
