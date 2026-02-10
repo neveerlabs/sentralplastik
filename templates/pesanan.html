@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesanan Saya | SENTRAL PLASTIK</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/utama.css">
+    <link rel="stylesheet" href="../css/pesanan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <div class="logo-container">
+                        <span class="logo-text">SENTRAL PLASTIK</span>
+                    </div>
+                </a>
+                
+                <div class="mobile-elements d-flex d-lg-none align-items-center">
+                    <div class="search-box mobile-search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Cari..." id="searchInputMobilePesanan">
+                        <div id="mobileSearchResultsPesanan" class="search-results"></div>
+                    </div>
+                    
+                    <div class="order-icon mobile-order">
+                        <a href="#" id="orderButtonMobilePesanan">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span class="order-count" id="orderCountMobilePesanan">0</span>
+                        </a>
+                    </div>
+                    
+                    <div class="cart-icon mobile-cart">
+                        <a href="#" id="cartButtonMobilePesanan">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCountMobilePesanan">0</span>
+                        </a>
+                    </div>
+                    
+                    <button class="mobile-menu-toggle" type="button" id="mobileMenuTogglePesanan">
+                        <div class="hamburger-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+                </div>
+                
+                <div class="desktop-menu d-none d-lg-flex align-items-center">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                <i class="fas fa-home"></i> BERANDA
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-th-large"></i> KATEGORI
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="kategori.html?cat=dapur">PERLENGKAPAN DAPUR</a></li>
+                                <li><a class="dropdown-item" href="kategori.html?cat=kemasan">KEMASAN MAKANAN</a></li>
+                                <li><a class="dropdown-item" href="kategori.html?cat=rumahtangga">PERLENGKAPAN RUMAH TANGGA</a></li>
+                                <li><a class="dropdown-item" href="kategori.html?cat=usaha">KEBUTUHAN USAHA</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <i class="fas fa-clipboard-list"></i> PESANAN
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tentang.html">
+                                <i class="fas fa-info-circle"></i> TENTANG
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">
+                                <i class="fas fa-blog"></i> BLOG
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="penawaran.html">
+                                <i class="fas fa-tag"></i> PENAWARAN SPESIAL
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <div class="desktop-icons">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Cari produk..." id="searchInputPesanan"
+                                   onkeypress="if(event.key === 'Enter') window.location.href='hasil.html?q=' + encodeURIComponent(this.value)">
+                            <div id="desktopSearchResultsPesanan" class="search-results"></div>
+                        </div>
+                        <div class="header-icon-group">
+                            <div class="order-icon">
+                                <a href="#" id="orderButtonPesanan">
+                                    <i class="fas fa-clipboard-list"></i>
+                                    <span class="order-count" id="orderCountPesanan">0</span>
+                                </a>
+                            </div>
+                            <div class="cart-icon">
+                                <a href="#" id="cartButtonPesanan">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span class="cart-count" id="cartCountPesanan">0</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mobile-menu-overlay" id="mobileMenuOverlayPesanan">
+                    <div class="mobile-menu-content">
+                        <div class="mobile-menu-header">
+                            <div class="mobile-menu-title">MENU</div>
+                            <button class="mobile-menu-close" id="mobileMenuClosePesanan">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <ul class="mobile-nav">
+                            <li class="mobile-nav-item">
+                                <a class="mobile-nav-link" href="../index.html">
+                                    <i class="fas fa-home"></i> BERANDA
+                                </a>
+                            </li>
+                            <li class="mobile-nav-item">
+                                <a class="mobile-nav-link" href="kategori.html">
+                                    <i class="fas fa-th-large"></i> KATEGORI
+                                </a>
+                            </li>
+                            <li class="mobile-nav-item">
+                                <a class="mobile-nav-link active" href="#">
+                                    <i class="fas fa-clipboard-list"></i> PESANAN
+                                </a>
+                            </li>
+                            <li class="mobile-nav-item">
+                                <a class="mobile-nav-link" href="tentang.html">
+                                    <i class="fas fa-info-circle"></i> TENTANG
+                                </a>
+                            </li>
+                            <li class="mobile-nav-item">
+                                <a class="mobile-nav-link" href="blog.html">
+                                    <i class="fas fa-blog"></i> BLOG
+                                </a>
+                            </li>
+                            <li class="mobile-nav-item">
+                                <a class="mobile-nav-link" href="penawaran.html">
+                                    <i class="fas fa-tag"></i> PENAWARAN SPESIAL
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content kategori-main">
+        <section class="banner-kategori">
+            <div class="container">
+                <div class="banner-content">
+                    <div class="banner-text">
+                        <h1 class="banner-title">PESANAN SAYA</h1>
+                        <p class="banner-subtitle">Lihat status dan riwayat pesanan Anda</p>
+                        <div class="banner-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-clock"></i>
+                                <span id="pendingOrdersCount">0</span> Menunggu
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-truck"></i>
+                                <span id="processingOrdersCount">0</span> Diproses
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span id="completedOrdersCount">0</span> Selesai
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-image">
+                        <div class="banner-placeholder">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-filter-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">FILTER PESANAN</h2>
+                    <button class="btn-filter" id="refreshOrders">
+                        <i class="fas fa-sync-alt"></i> Refresh
+                    </button>
+                </div>
+                <div class="filter-tags">
+                    <span class="filter-tag active" data-filter="all">Semua</span>
+                    <span class="filter-tag" data-filter="pending">Menunggu</span>
+                    <span class="filter-tag" data-filter="processing">Diproses</span>
+                    <span class="filter-tag" data-filter="shipped">Dikirim</span>
+                    <span class="filter-tag" data-filter="delivered">Selesai</span>
+                    <span class="filter-tag" data-filter="cancelled">Dibatalkan</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="kategori-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">DAFTAR PESANAN</h2>
+                    <p class="section-subtitle" id="orderCountText">0 pesanan ditemukan</p>
+                </div>
+                
+                <div id="ordersList">
+                </div>
+                
+                <div class="text-center mt-5" id="noOrders" style="display: none;">
+                    <i class="fas fa-clipboard-list fa-3x text-muted mb-3"></i>
+                    <h4>Belum ada pesanan</h4>
+                    <p class="text-muted">Mulai berbelanja untuk melihat pesanan di sini</p>
+                    <a href="../index.html" class="btn btn-primary mt-3">
+                        <i class="fas fa-shopping-cart"></i> Mulai Belanja
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal fade" id="orderDetailModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">DETAIL PESANAN</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="orderDetailContent">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <button type="button" class="btn btn-danger" id="cancelOrderButton" style="display: none;">Batalkan Pesanan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cartModalPesanan" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">KERANJANG BELANJA</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cartItemsPesanan"></div>
+                    <div class="cart-total">
+                        <h4>Total: <span id="cartTotalPesanan">Rp 0</span></h4>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Lanjut Belanja</button>
+                    <button type="button" class="btn btn-primary" id="checkoutButtonPesanan">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand">SENTRAL PLASTIK</div>
+                    <p class="footer-description">
+                        Distributor perlengkapan plastik terlengkap dengan kualitas terbaik dan harga kompetitif.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h4>KATEGORI</h4>
+                    <ul class="footer-links">
+                        <li><a href="kategori.html?cat=dapur">Perlengkapan Dapur</a></li>
+                        <li><a href="kategori.html?cat=kemasan">Kemasan Makanan</a></li>
+                        <li><a href="kategori.html?cat=rumahtangga">Perlengkapan Rumah Tangga</a></li>
+                        <li><a href="kategori.html?cat=usaha">Kebutuhan Usaha</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h4>LINK CEPAT</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="kategori.html">Kategori</a></li>
+                        <li><a href="#">Pesanan</a></li>
+                        <li><a href="penawaran.html">Penawaran Spesial</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4>KONTAK KAMI</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Jl. Raya Plastik No. 123, Jakarta</li>
+                        <li><i class="fas fa-phone"></i> 0812-3456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@sentralplastik.com</li>
+                        <li><i class="fas fa-clock"></i> Senin - Sabtu: 08.00 - 17.00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2026 SENTRAL PLASTIK. Seluruh hak cipta dilindungi oleh undang-undang.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/barang.js"></script>
+    <script src="../js/pesanan.js"></script>
+</body>
+</html>
